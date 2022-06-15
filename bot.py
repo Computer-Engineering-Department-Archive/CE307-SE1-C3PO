@@ -1,137 +1,111 @@
-import telegram.ext
-import os
-import logging
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+'''from telethon.tl.functions.contacts import ResolveUsernameRequest
 
-PORT = int(os.environ.get('PORT','8443'))
+response = client.invoke(ResolveUsernameRequest("@parsa_roshann"))
+messages = client.get_message_history(response.peer,limit=1000)
+with TelegramClient('Kamyarhsn', api_id, api_hash) as client:
+   client.connect()
 
+   @client.on(events.NewMessage(pattern='(?i).*Hello'))
+   async def handler(event):
+      await event.reply('Hey!')
 
+   response = client.invoke(ResolveUsernameRequest("parsa_roshann"))
+   print(response.channel_id)
+   print(response.access_hash)
+client = TelegramClient('Kamyarhsn', api_id, api_hash)
+client.connect()
+async def main():
+   print("salam")
+   async for message in client.iter_messages('parsa_roshann'):
+      print(message.sender.username, message.text)
 
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
-
-logger = logging.getLogger(__name__)
-
-
-TOKEN = '5182094053:AAGCIhTSpMCh3vhLiUy7pPVZQyRY0PpZayI'
-APP_NAME = 'https://scientificsociety-bot.herokuapp.com/'
-listOfChatsText = dict()
-listOfChatsIDs = dict()
-listOfSuggestions = dict()
-messageIdChatId = dict()
-
-bot = telegram.Bot(TOKEN)
-
-
-
-def start(update, context):
-    global listOfChatsIDs,listOfChatsText,bot
-    listOfChatsIDs[update.message.chat_id] = 0
-    id = update.message.chat_id
-    listOfChatsIDs[id] = ""
-    listOfChatsText[id] = ""
-    bot_welcome = """
-.با سلام به ربات انجمن علمی مهندسی مواد و متالورژی دانشگاه صنعتی امیرکبیر خوش آمدید
-.با تشکر از شما برای زمانی که برای پیشنهادات و انتقادات می‌گذارید
-.همچنین از این طریق می‌توانید اگر سوالی دارید نیز بپرسی
-.با تشکر
-
-    """
-    keyboard = [
-        [
-            InlineKeyboardButton("پرسش و پاسخ", callback_data='question'),
-            InlineKeyboardButton("انتقادات و پیشنهادات", callback_data='suggestion'),
-        ]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_text(bot_welcome, reply_markup=reply_markup)
-    pass
-
-def button(update,context):
-    global  listOfChatsIDs
-    id = update.callback_query.from_user.id
-    query = update.callback_query
-    query.answer()
-    if query.data == 'question':
-        listOfChatsIDs[id] = 'Q_0'
-        query.message.reply_text(text="""
-.لطفا سوال خود را بفرمایید. در اسرع وقت توسط اعضای انجمن علمی به آن پاسخ داده می‌شود
-.لازم به ذکر است که تمامی ارتباطات به صورت ناشناس خواهد بود
-.باتشکر """)
-    elif query.data == 'suggestion':
-        listOfChatsIDs[id] = 'S_0'
-        query.message.reply_text(text=""" 
-.لطفا انتقاد یا پیشنهاد خود را پیام بعدی با ما در ارتباط بگذارید 
-.لازم به ذکر است تمامی ارتباطات به صورت ناشناس خواهد بود
-.با تشکر""")
-    
-
-def help(update, context):
-    update.message.reply_text("""
-    به منظور ثبت نظرات ابتدا کامند
-    /start
-    .را بزنید و سپس با توجه به راهنمای مورد نظر پیام خود را ارسال کنید. با تشکر از همکاری شما 
-    """)
-
-def handle_contact(update,context):
-    global listOfChatsText,listOfChatsIDs,bot,listOfSuggestions,messageIdChatId
-
-    id = update.message.chat_id
-    
-    if id != -1001610569280 and listOfChatsIDs[id] == 'Q_0' :
-        listOfChatsText[id] = (update.message.text).replace("\n"," ")
-        message = bot.sendMessage(chat_id = -1001610569280,text ="پرسش \n" + listOfChatsText[id] + "\n id = " + str(id))
-        update.message.reply_text("با تشکر پرسش شما با موفقیت دریافت شد. پاسخ آن در اسرع وقت خدمتتان ارسال می‌شود.")
-        listOfSuggestions[message.message_id] = message
-        messageIdChatId[id] = message.message_id
-
-    if id != -1001610569280 and listOfChatsIDs[id] == 'S_0':
-        listOfChatsText[id] = (update.message.text).replace("\n"," ")
-        message = bot.sendMessage(chat_id = -1001610569280,text ="انتقادات \n" + listOfChatsText[id]+ "\n id = " + str(id))
-        listOfSuggestions[message.message_id] = message
-        messageIdChatId[id] = message.message_id
-        update.message.reply_text(".با تشکر از ثبت نظر شما در صورت وجود ابهام از طریق همین ربات با شما ارتباط گرفته خواهد شد ")
-        listOfChatsText[id] = ""
-        listOfChatsIDs[id] = 0
-
-    if id == -1001610569280:
-        msg = update.message.reply_to_message
-        idForReplying = find_ID(msg.message_id)
-        bot.sendMessage(chat_id = idForReplying, text = update.message.text)
-        listOfChatsText[idForReplying] = ""
-        listOfChatsIDs[idForReplying] = 0
-
-    pass
-
-def find_ID(msg_id):
-    global messageIdChatId
-    for key in messageIdChatId:
-        if messageIdChatId[key] == msg_id:
-            return key
+client.loop.run_until_complete(main())'''
+from telethon.client import chats
+from telethon.sync import TelegramClient
+from telethon.tl.functions.messages import (GetHistoryRequest)
+import datetime
+import json
 
 
-def error(update,context):
-    logger.warning('Update "%s" caused error "%s"', update, context.error)
 
-def main():
-    global TOKEN,APP_NAME,PORT
-    
-    
-    updater = telegram.ext.Updater(TOKEN, use_context=True)
+api_id = '14744394'
+api_hash = '886c291a4bc69b5bacd66310cc26c782'
 
-    disp = updater.dispatcher
+phone_number = '+989387754805'
+client = TelegramClient('Kamyarhsn',
+                    api_id,
+                    api_hash)
+client.connect()
+if not client.is_user_authorized():
+    client.send_code_request(phone_number)
+    me = client.sign_in(phone_number, input('Enter code: '))
 
-    disp.add_handler(telegram.ext.CommandHandler("start",start))
-    disp.add_handler(telegram.ext.CommandHandler("help",help))
-    disp.add_handler(telegram.ext.CallbackQueryHandler(button))
-    disp.add_handler(telegram.ext.MessageHandler(telegram.ext.Filters.text,handle_contact))
-    disp.add_error_handler(error)
+#channel_username='GoldenSignalChannel' # your channel
+#channel_entity=client.get_entity(channel_username)
 
-    updater.start_webhook(listen="0.0.0.0",port = PORT,url_path=TOKEN,webhook_url=APP_NAME + TOKEN)
-    #updater.start_polling()
-    updater.idle()
+listOfMessages = []
+table = dict.fromkeys(['channelName','message_id', 'message','date', 'from_id', 'forward_from', 'forwards','edit_date','edit_hide','is_reply','NumReplies','reply_to_message_id'])
+
+def readingFromChannel(chat,numberOfMessages,priorDays,lastDateRead):
+   chat = chat[1:]
+   channel_entity = client.get_entity(chat)
+   posts = client(GetHistoryRequest(
+      peer = channel_entity,
+      limit = numberOfMessages,
+      offset_date = None,
+      offset_id = 0,
+      max_id = 0,
+      min_id = 0,
+      add_offset = 0,
+      hash = 0))
+   dateLimit = datetime.datetime.now(posts.messages[0].date.tzinfo) - datetime.timedelta(days = priorDays)   
+   for message in posts.messages:
+      
+      if message.date > dateLimit and message.date > lastDateRead:
+         table['channelName'] = chat 
+         table['message_id'] = message.id
+         if message.raw_text == None:
+            continue
+         table['message'] = message.raw_text.replace("\n"," ")
+         table['date'] = message.date.strftime("%Y/%m/%d,%H:%M:%S")
+         table['from_id'] = message.from_id
+         if message.fwd_from != None:
+            table['forward_from'] = message.fwd_from.from_name
+         else:
+            table['forward_from'] = None
+
+         if message.forwards != None:
+            table['forwards'] = message.forwards
+         else:
+            table['forwards'] = None
+            
+         if message.edit_date != None:
+            table['edit_date'] = message.edit_date.strftime("%Y/%m/%d,%H:%M:%S")
+            table['edit_hide'] = message.edit_hide
+         else:
+            table['edit_date'] = None
+            table['edit_hide'] = None
+
+         if message.is_reply != None:
+            table['is_reply'] = message.is_reply
+            table['reply_to_message_id'] = message.reply_to_msg_id
+         else:
+            table['is_reply'] = None
+            table['reply_to_message_id'] = None
+
+         if message.replies != None:
+            table['NumReplies'] = message.replies
+         else:
+            table['NumReplies'] = 0
+         
+         
+
+         listOfMessages.append(json.dumps(table,ensure_ascii = False))
+   
+   return listOfMessages
 
 
-if __name__ == '__main__':
-    main()
-    
+
+      
+
+
