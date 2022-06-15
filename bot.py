@@ -1,25 +1,4 @@
-'''from telethon.tl.functions.contacts import ResolveUsernameRequest
 
-response = client.invoke(ResolveUsernameRequest("@parsa_roshann"))
-messages = client.get_message_history(response.peer,limit=1000)
-with TelegramClient('Kamyarhsn', api_id, api_hash) as client:
-   client.connect()
-
-   @client.on(events.NewMessage(pattern='(?i).*Hello'))
-   async def handler(event):
-      await event.reply('Hey!')
-
-   response = client.invoke(ResolveUsernameRequest("parsa_roshann"))
-   print(response.channel_id)
-   print(response.access_hash)
-client = TelegramClient('Kamyarhsn', api_id, api_hash)
-client.connect()
-async def main():
-   print("salam")
-   async for message in client.iter_messages('parsa_roshann'):
-      print(message.sender.username, message.text)
-
-client.loop.run_until_complete(main())'''
 from telethon.client import chats
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import (GetHistoryRequest)
