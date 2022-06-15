@@ -32,5 +32,8 @@ def init_suspicious():
 
 if __name__ == "__main__":
     print('DATABASE INITIALIZATION')
-    # init_category()
-    # init_url()
+    init_category()
+    init_url()
+    init_messages()
+    init_validation()
+    init_suspicious()

@@ -1,6 +1,9 @@
 import sqlite3
 import logging
 import time
+import sys
+
+# sys.stdout = open('../log.txt', 'w')
 
 
 class Database(logging.Handler):
@@ -33,4 +36,4 @@ class Database(logging.Handler):
         self.log()
 
     def log(self):
-        self.connection.set_trace_callback('SOMETHING')
+        self.connection.set_trace_callback(print)

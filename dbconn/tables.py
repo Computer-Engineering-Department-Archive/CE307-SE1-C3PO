@@ -5,7 +5,7 @@ db = Database()
 
 
 def suspicious():
-    query, params = '''CREATE TABLE IF NOT EXISTS URLS(
+    query, params = '''CREATE TABLE IF NOT EXISTS SUSPICIOUS(
                             ID INTEGER PRIMARY KEY AUTOINCREMENT          NOT NULL,
                             URLS_ID INTEGER                               NOT NULL,
                             CONSTRAINT FK_URLS
@@ -18,7 +18,7 @@ def suspicious():
 
 
 def validation():
-    query, params = '''CREATE TABLE IF NOT EXISTS URLS(
+    query, params = '''CREATE TABLE IF NOT EXISTS VALIDATION(
                         ID INTEGER PRIMARY KEY AUTOINCREMENT          NOT NULL,
                         VALUE INTEGER DEFAULT 0                               ,
                         SIGNAL_TYPE_ID INTEGER                                ,
@@ -32,7 +32,7 @@ def validation():
 
 
 def message():
-    query, params = '''CREATE TABLE IF NOT EXISTS URLS(
+    query, params = '''CREATE TABLE IF NOT EXISTS MESSAGE(
                         NAME TEXT                                     NOT NULL,
                         MESSAGE_ID INTEGER PRIMARY KEY                NOT NULL,
                         MESSAGE_TEXT TEXT                             NOT NULL,
@@ -44,7 +44,7 @@ def message():
                         EDIT_HIDE INTEGER                                     ,
                         IS_REPLY INTEGER                                      ,
                         NUM_REPLIES INTEGER                                   ,
-                        REPLY_TO_MESSAGE_ID INTEGER                           ,
+                        REPLY_TO_MESSAGE_ID INTEGER                           
                         );''', ()
 
     db.cur.execute(query, params)
