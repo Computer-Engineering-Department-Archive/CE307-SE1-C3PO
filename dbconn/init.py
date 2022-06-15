@@ -9,10 +9,25 @@ def init_category():
 
 
 def init_url():
-    url()
+    urls()
     print("URL TABLE CREATED.")
-    url_init()
-    print("URL VALUES INSERTED")
+    urls_init()
+    print("URL VALUES INSERTED.")
+
+
+def init_messages():
+    message()
+    print("MESSAGES TABLE CREATED.")
+
+
+def init_validation():
+    validation()
+    print("VALIDATION TABLE CREATED.")
+
+
+def init_suspicious():
+    suspicious()
+    print("SUSPICIOUS TABLE CREATED.")
 
 
 if __name__ == "__main__":

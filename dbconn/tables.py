@@ -3,13 +3,61 @@ from database import Database
 
 db = Database()
 
+
+def suspicious():
+    query, params = '''CREATE TABLE IF NOT EXISTS URLS(
+                            ID INTEGER PRIMARY KEY AUTOINCREMENT          NOT NULL,
+                            URLS_ID INTEGER                               NOT NULL,
+                            CONSTRAINT FK_URLS
+                                FOREIGN KEY (URLS_ID)
+                                REFERENCES URLS(ID)
+                            );''', ()
+
+    db.cur.execute(query, params)
+    db.commit()
+
+
+def validation():
+    query, params = '''CREATE TABLE IF NOT EXISTS URLS(
+                        ID INTEGER PRIMARY KEY AUTOINCREMENT          NOT NULL,
+                        VALUE INTEGER DEFAULT 0                               ,
+                        SIGNAL_TYPE_ID INTEGER                                ,
+                        CONSTRAINT FK_CATEGORY_ELEMENT
+                            FOREIGN KEY (SIGNAL_TYPE_ID)
+                            REFERENCES CATEGORY_ELEMENT(ID)
+                        );''', ()
+
+    db.cur.execute(query, params)
+    db.commit()
+
+
+def message():
+    query, params = '''CREATE TABLE IF NOT EXISTS URLS(
+                        NAME TEXT                                     NOT NULL,
+                        MESSAGE_ID INTEGER PRIMARY KEY                NOT NULL,
+                        MESSAGE_TEXT TEXT                             NOT NULL,
+                        DATE DATETIME                                 NOT NULL,
+                        FROM_ID INTEGER                                       ,
+                        FORWARD_FROM INTEGER                                  ,
+                        FORWARDS_COUNT INTEGER                                ,
+                        EDITED_DATE DATETIME                                  ,
+                        EDIT_HIDE INTEGER                                     ,
+                        IS_REPLY INTEGER                                      ,
+                        NUM_REPLIES INTEGER                                   ,
+                        REPLY_TO_MESSAGE_ID INTEGER                           ,
+                        );''', ()
+
+    db.cur.execute(query, params)
+    db.commit()
+
+
 """
 URL TABLE
 STORES URLS AND CATEGORIES
 """
 
 
-def url():
+def urls():
     query, params = '''CREATE TABLE IF NOT EXISTS URLS(
                         ID INTEGER PRIMARY KEY AUTOINCREMENT         NOT NULL,
                         URL TEXT                                     NOT NULL,
@@ -23,7 +71,7 @@ def url():
     db.commit()
 
 
-def url_init():
+def urls_init():
     f = open('../resources/urls.txt', 'r')
 
     urls = f.read().split('\n')
