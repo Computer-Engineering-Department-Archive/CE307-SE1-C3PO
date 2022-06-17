@@ -25,64 +25,66 @@ if not client.is_user_authorized():
 # channel_username='GoldenSignalChannel' # your channel
 # channel_entity=client.get_entity(channel_username)
 
-listOfMessages = []
+messages_list = []
 table = dict.fromkeys(
     ['channelName', 'message_id', 'message', 'date', 'from_id', 'forward_from', 'forwards', 'edit_date', 'edit_hide',
      'is_reply', 'NumReplies', 'reply_to_message_id'])
 
 
-def readingFromChannel(chat, numberOfMessages, priorDays, lastDateRead):
+def reading_from_channel(chat, messages_count, from_date, to_date):
     chat = chat[1:]
     channel_entity = client.get_entity(chat)
     posts = client(GetHistoryRequest(
         peer=channel_entity,
-        limit=numberOfMessages,
+        limit=messages_count,
         offset_date=None,
         offset_id=0,
         max_id=0,
         min_id=0,
         add_offset=0,
         hash=0))
-    dateLimit = datetime.datetime.now(posts.messages[0].date.tzinfo) - datetime.timedelta(days=priorDays)
+    date_limit = datetime.datetime.now(posts.messages[0].date.tzinfo) - datetime.timedelta(days=from_date)
     for message in posts.messages:
 
-        if message.date > dateLimit and message.date > lastDateRead:
+        if message.date > date_limit and message.date > to_date:
             table['channelName'] = chat
             table['message_id'] = message.id
-            if message.raw_text == None:
+
+            if message.raw_text is None:
                 continue
             table['message'] = message.raw_text.replace("\n", " ")
             table['date'] = message.date.strftime("%Y/%m/%d,%H:%M:%S")
             table['from_id'] = message.from_id
-            if message.fwd_from != None:
+
+            if message.fwd_from is not None:
                 table['forward_from'] = message.fwd_from.from_name
             else:
                 table['forward_from'] = None
 
-            if message.forwards != None:
+            if message.forwards is not None:
                 table['forwards'] = message.forwards
             else:
                 table['forwards'] = None
 
-            if message.edit_date != None:
+            if message.edit_date is not None:
                 table['edit_date'] = message.edit_date.strftime("%Y/%m/%d,%H:%M:%S")
                 table['edit_hide'] = message.edit_hide
             else:
                 table['edit_date'] = None
                 table['edit_hide'] = None
 
-            if message.is_reply != None:
+            if message.is_reply is not None:
                 table['is_reply'] = message.is_reply
                 table['reply_to_message_id'] = message.reply_to_msg_id
             else:
                 table['is_reply'] = None
                 table['reply_to_message_id'] = None
 
-            if message.replies != None:
+            if message.replies is not None:
                 table['NumReplies'] = message.replies
             else:
                 table['NumReplies'] = 0
 
-            listOfMessages.append(json.dumps(table, ensure_ascii=False))
+            messages_list.append(json.dumps(table, ensure_ascii=False))
 
-    return listOfMessages
+    return messages_list
