@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64582dc8-5aff-4465-8fad-730b77c9d93f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CE307_SE1_C3P0.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/categoryCRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/keywordCRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/symbolCRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/urlCRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fixtures/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fixtures/fixtures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0002_alter_stocksymbol_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0003_stocksymbol_unique_code_combination.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0004_keyword_keywordvalue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0005_alter_keyword_options_alter_keywordvalue_options_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CE307-SE-C3PO.iml" beforeDir="false" />
+    <list default="true" id="64582dc8-5aff-4465-8fad-730b77c9d93f" name="Changes" comment="[add] logs">
+      <change afterPath="$PROJECT_DIR$/app/controller/analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/botnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/teleton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/contentCRUD/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/signalCRUD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/bot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/messageCRUD.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/urlsCRUD.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconn/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconn/init.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconn/tables.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/285c67b3-ecde-4e8f-8a06-2cf5cd0ed655.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47f9bd18-97ff-42f9-b742-f65576f1cde6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89a3158f-4d54-45e6-85a5-90af22b013ca.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0d7ab62-ab92-4a6e-af4c-22b048a740e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d0d7ab62-ab92-4a6e-af4c-22b048a740e6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4766ac8-111a-4031-b221-c5475f9a81ed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CE307_SE1_C3P0/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CE307_SE1_C3P0/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/categoryCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/categoryCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/keywordCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/keywordCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/symbolCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/symbolCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/urlCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/urlCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/fixtures/fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/fixtures/fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_alter_stocksymbol_code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_stocksymbol_unique_code_combination.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_keyword_keywordvalue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0005_alter_keyword_options_alter_keywordvalue_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,18 +66,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/model/contentCRUD" />
       <recent name="$PROJECT_DIR$/app/fixtures" />
       <recent name="$PROJECT_DIR$/Resources" />
       <recent name="$PROJECT_DIR$/app/controller" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/models" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.CE307_SE1_C3P0">
@@ -165,8 +166,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655980327762</updated>
-      <workItem from="1655980335561" duration="22658000" />
+      <workItem from="1655980335561" duration="24472000" />
+      <workItem from="1656045717109" duration="7845000" />
     </task>
+    <task id="LOCAL-00001" summary="[add] lots of stuff">
+      <created>1656004208061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1656004208061</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[add] logs">
+      <created>1656004267104</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1656004267104</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +199,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="[add] lots of stuff" />
+    <MESSAGE value="[add] logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="[add] logs" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$fixtures.coverage" NAME="fixtures Coverage Results" MODIFIED="1656000525556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/fixtures" />

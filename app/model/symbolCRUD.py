@@ -1,4 +1,4 @@
-from app.models import ContentSymbol, StockSymbol
+from app.models import ContentSymbol, StockSymbol, Message
 from django.core import serializers
 
 
@@ -6,7 +6,7 @@ def delete_all_stock_symbols():
     StockSymbol.objects.all().delete()
 
 
-def get_all_stock_symbols():
+def read_all_stock_symbols():
     entries = StockSymbol.objects.all()
     response = {'stock symbols ': serializers.serialize("json", entries)}
 
@@ -17,8 +17,17 @@ def delete_all_content_symbol():
     ContentSymbol.objects.all().delete()
 
 
-def get_all_content_symbol():
+def read_all_content_symbol():
     entries = ContentSymbol.objects.all()
     response = {'content symbols ': serializers.serialize("json", entries)}
 
     return [response, entries.count()]
+
+
+def create_content_symbol(message_id, symbol_code):
+    message = Message.objects.filter(id=message_id).first()
+    stock_symbol = StockSymbol.objects.filter(code=symbol_code).first()
+
+    content_symbol = ContentSymbol(content_type=message, stock_symbol=stock_symbol)
+    content_symbol.save()
+

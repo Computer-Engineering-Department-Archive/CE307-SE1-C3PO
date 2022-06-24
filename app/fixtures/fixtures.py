@@ -54,7 +54,6 @@ def add_keywords():
 
     table = f.read().split('\n')
     for line in table:
-        print(line)
         labels = line.split(',')
         value, _type, _key = labels[2], labels[1], labels[0]
 

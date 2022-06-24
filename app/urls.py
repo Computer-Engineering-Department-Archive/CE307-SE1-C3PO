@@ -18,5 +18,6 @@ import app.views as views
 
 urlpatterns = [
     path('', views.home),
-    path('fixtures/', views.fixtures)
+    path('fixtures/', views.fixtures),
+    path('urls/', views.urls),
 ]

@@ -11,3 +11,8 @@ def get_all():
     response = {'categories ': serializers.serialize("json", entries)}
 
     return [response, entries.count()]
+
+
+def create(category, item):
+    c = Category(category=category, item=item)
+    c.save()

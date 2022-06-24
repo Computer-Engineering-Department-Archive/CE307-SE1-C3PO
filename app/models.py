@@ -86,6 +86,17 @@ class ContentSymbol(Version):
     content_object = GenericForeignKey()
 
 
+class Signal(Version):
+    is_signal = models.BooleanField(null=False)
+    is_buy = models.BooleanField(null=False)
+    is_sell = models.BooleanField(null=False)
+
+    # Below the mandatory fields for generic relation
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    content_object = GenericForeignKey()
+
+
 class Message(Version):
     id = models.IntegerField('مشخصه', primary_key=True)
     name = models.CharField('اسم کانال/گروه', max_length=256, null=False)
@@ -100,7 +111,9 @@ class Message(Version):
     reply_count = models.IntegerField('دفعاتی که به پیام پاسخ داده شده', null=True)
     reply_to = models.IntegerField('مشخصه پیام اصلی پاسخ داده شده', null=True)
 
+    URL = models.ForeignKey(URL, on_delete=models.CASCADE, related_name='URL')
     symbols = GenericRelation(ContentSymbol)
+    signals = GenericRelation(Signal)
 
     class Meta:
         ordering = ['id']
