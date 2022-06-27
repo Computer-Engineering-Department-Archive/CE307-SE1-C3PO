@@ -1,13 +1,21 @@
 import datetime
+
+from django.utils import timezone
 from telethon.tl.functions.messages import (GetHistoryRequest)
 from app.model.contentCRUD.messageCRUD import create
-from app.model.urlCRUD import read_all
-from teleton import connect
+from app.model.urlCRUD import read_all_urls
+from app.controller.teleton import connect
 
 message_count = 50
-from_date = 30
-to_date = 5
+
+from_date_days = 30
+from_date = datetime.datetime.now(tz=timezone.utc) - datetime.timedelta(from_date_days)
+
+to_date_days = 5
+to_date = datetime.datetime.now(tz=timezone.utc) - datetime.timedelta(to_date_days)
+
 messages_list = []
+
 table = dict.fromkeys(
     ['name', '_id', 'message', 'pub_date', 'from_id', 'forward_from', 'forward_count', 'edit_date', 'edit_hide',
      'is_reply', 'reply_count', 'reply_to'])
@@ -15,29 +23,29 @@ table = dict.fromkeys(
 
 def read_all_messages():
     client = connect()
-    urls = read_all()
+    urls = read_all_urls()
 
     for url in urls:
         read(client, url, from_date, to_date)
 
 
-def read(client, chat, msg_count, from_date, to_date):
+def read(client, chat, count, _from_date, _to_date):
     chat = chat[1:]
     channel_entity = client.get_entity(chat)
+
     posts = client(GetHistoryRequest(
         peer=channel_entity,
-        limit=msg_count,
-        offset_date=None,
+        limit=count,
+        offset_date=_from_date,
         offset_id=0,
         max_id=0,
         min_id=0,
         add_offset=0,
         hash=0))
 
-    date_limit = datetime.datetime.now(posts.messages[0].date.tzinfo) - datetime.timedelta(days=to_date)
     for message in posts.messages:
 
-        if message.date > date_limit:
+        if message.date > _to_date:
             table['name'] = chat
             table['_id'] = message.id
             if message.raw_text is None:

@@ -7,10 +7,9 @@ def delete_all():
 
 
 def get_all():
-    entries = Category.objects.all()
-    response = {'categories ': serializers.serialize("json", entries)}
+    entries = Category.objects.values()
 
-    return [response, entries.count()]
+    return [entries, entries.count()]
 
 
 def create(category, item):

@@ -7,10 +7,9 @@ def delete_all_stock_symbols():
 
 
 def read_all_stock_symbols():
-    entries = StockSymbol.objects.all()
-    response = {'stock symbols ': serializers.serialize("json", entries)}
+    entries = StockSymbol.objects.values()
 
-    return [response, entries.count()]
+    return [entries, entries.count()]
 
 
 def delete_all_content_symbol():
@@ -18,16 +17,14 @@ def delete_all_content_symbol():
 
 
 def read_all_content_symbol():
-    entries = ContentSymbol.objects.all()
-    response = {'content symbols ': serializers.serialize("json", entries)}
+    entries = ContentSymbol.objects.values()
 
-    return [response, entries.count()]
+    return [entries , entries.count()]
 
 
 def create_content_symbol(message_id, symbol_code):
     message = Message.objects.filter(id=message_id).first()
     stock_symbol = StockSymbol.objects.filter(code=symbol_code).first()
 
-    content_symbol = ContentSymbol(content_type=message, stock_symbol=stock_symbol)
+    content_symbol = ContentSymbol(content=message, stock_symbol=stock_symbol)
     content_symbol.save()
-

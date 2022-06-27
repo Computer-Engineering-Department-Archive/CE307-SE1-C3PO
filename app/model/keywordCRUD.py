@@ -6,15 +6,18 @@ def delete_all_keywords():
     Keyword.objects.all().delete()
 
 
-def read_all_keywords():
-    entries = Keyword.objects.all()
-    response = {'keywords ': serializers.serialize("json", entries)}
-
-    return [response, entries.count()]
-
-
 def read_all_keywords_query_set():
     return Keyword.objects.all()
+
+
+def read_all_keywords():
+    entries = read_all_keywords_query_set()
+
+    results = {}
+    for e in entries:
+        results[e['type']] = e['key']
+
+    return results
 
 
 def create_keyword(_key, _type):
@@ -27,10 +30,9 @@ def delete_all_keyword_values():
 
 
 def read_all_keyword_values():
-    entries = KeywordValue.objects.all()
-    response = {'keyword values ': serializers.serialize("json", entries)}
+    entries = KeywordValue.objects.values()
 
-    return [response, entries.count()]
+    return [entries, entries.count()]
 
 
 def read_all_keyword_values_query_set():

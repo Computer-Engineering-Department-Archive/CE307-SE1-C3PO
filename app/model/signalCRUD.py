@@ -7,14 +7,14 @@ def delete_all():
 
 
 def read_all():
-    entries = Signal.objects.all()
-    response = {'signals ': serializers.serialize("json", entries)}
+    entries = Signal.objects.values
 
-    return [response, entries.count()]
+    return [entries, entries.count()]
 
 
 def create(message_id, is_signal, is_buy, is_sell):
     message = Message.objects.filter(id=message_id).first()
 
-    signal = Signal(content_type=message, is_signal=is_signal, is_buy=is_buy, is_sell=is_sell)
+    signal = Signal(content=message,
+                    is_signal=is_signal, is_buy=is_buy, is_sell=is_sell)
     signal.save()

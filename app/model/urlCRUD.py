@@ -7,10 +7,17 @@ def delete_all():
 
 
 def read_all():
-    entries = URL.objects.all()
-    response = {'urls ': serializers.serialize("json", entries)}
+    return URL.objects.values()
 
-    return [response, entries.count()]
+
+def read_all_urls():
+    entries = read_all()
+
+    results = []
+    for e in entries:
+        results.append(e['domain'])
+
+    return results
 
 
 def read(domain):

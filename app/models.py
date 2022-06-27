@@ -6,7 +6,7 @@ from django.contrib.contenttypes.models import ContentType
 # Create your models here.
 class Version(models.Model):
     creation = models.DateTimeField(auto_now_add=True, editable=False)
-    models.PositiveSmallIntegerField(default=0)
+    version = models.PositiveSmallIntegerField(default=0)
 
     class Meta:
         abstract = True
@@ -77,26 +77,6 @@ class StockSymbol(Version):
         ]
 
 
-class ContentSymbol(Version):
-    stock_symbol = models.ForeignKey(StockSymbol, on_delete=models.CASCADE, related_name='StockSymbol')
-
-    # Below the mandatory fields for generic relation
-    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField()
-    content_object = GenericForeignKey()
-
-
-class Signal(Version):
-    is_signal = models.BooleanField(null=False)
-    is_buy = models.BooleanField(null=False)
-    is_sell = models.BooleanField(null=False)
-
-    # Below the mandatory fields for generic relation
-    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField()
-    content_object = GenericForeignKey()
-
-
 class Message(Version):
     id = models.IntegerField('مشخصه', primary_key=True)
     name = models.CharField('اسم کانال/گروه', max_length=256, null=False)
@@ -112,8 +92,6 @@ class Message(Version):
     reply_to = models.IntegerField('مشخصه پیام اصلی پاسخ داده شده', null=True)
 
     URL = models.ForeignKey(URL, on_delete=models.CASCADE, related_name='URL')
-    symbols = GenericRelation(ContentSymbol)
-    signals = GenericRelation(Signal)
 
     class Meta:
         ordering = ['id']
@@ -122,6 +100,20 @@ class Message(Version):
                 fields=['id', 'name', 'edited_date'], name='unique_id_name_edit_combination'
             )
         ]
+
+
+class ContentSymbol(Version):
+    stock_symbol = models.ForeignKey(StockSymbol, on_delete=models.CASCADE, related_name='StockSymbol')
+
+    content = models.ForeignKey(Message, on_delete=models.CASCADE, related_name='MessageContent')
+
+
+class Signal(Version):
+    is_signal = models.BooleanField(null=False)
+    is_buy = models.BooleanField(null=False)
+    is_sell = models.BooleanField(null=False)
+
+    content = models.ForeignKey(Message, on_delete=models.CASCADE, related_name='MessageSignal')
 
 
 class Keyword(Version):

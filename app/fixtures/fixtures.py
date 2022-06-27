@@ -1,4 +1,7 @@
 from app.models import Category, URL, Message, StockSymbol, Keyword, KeywordValue
+from app.model.contentCRUD.messageCRUD import create
+
+PATH = '/Users/Bardia/Documents/aut/courses/CE307_SE1_C3P0/Resources'
 
 # CATEGORIES
 CATEGORY_TELEGRAM = 'CATEGORY_TELEGRAM'
@@ -27,7 +30,7 @@ def add_channels():
     category = Category.objects. \
         filter(category__iexact=CATEGORY_TELEGRAM, item__exact=TELEGRAM_CHANNEL).first()
 
-    f = open('Resources/urls.txt', 'r')
+    f = open(PATH + '/urls.txt', 'r')
 
     urls = f.read().split('\n')
     for i in urls:
@@ -38,7 +41,7 @@ def add_channels():
 
 
 def add_symbols():
-    f = open('Resources/fsymbols.csv', 'r')
+    f = open(PATH + '/fsymbols.csv', 'r')
 
     table = f.read().split('\n')
     for line in table:
@@ -50,7 +53,7 @@ def add_symbols():
 
 
 def add_keywords():
-    f = open('Resources/labels.txt', 'r')
+    f = open(PATH + '/labels.txt', 'r')
 
     table = f.read().split('\n')
     for line in table:
@@ -62,3 +65,22 @@ def add_keywords():
 
         val = KeywordValue(keyword=keyword, value=value)
         val.save()
+
+
+def add_messages():
+    f = open(PATH + '/message.csv', 'r')
+
+    table = f.read().split('\n')
+    for line in table[1:]:
+        fields = line.split(',')
+        fields = [None if v == '' else v for v in fields]
+        create(_id=fields[1], name=fields[2], text=fields[3], pub_date=fields[4], from_id=fields[5],
+               forward_from=fields[6], forward_count=fields[7], edited_date=fields[8], edit_hide=fields[9],
+               is_reply=fields[10], reply_count=fields[11], reply_to=fields[12])
+
+
+# add_category()
+# add_channels()
+# add_symbols()
+# add_keywords()
+# add_messages()

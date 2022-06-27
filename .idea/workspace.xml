@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64582dc8-5aff-4465-8fad-730b77c9d93f" name="Changes" comment="[add] logs">
-      <change afterPath="$PROJECT_DIR$/app/controller/analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/botnet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/teleton.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/contentCRUD/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/signalCRUD.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/285c67b3-ecde-4e8f-8a06-2cf5cd0ed655.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/47f9bd18-97ff-42f9-b742-f65576f1cde6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/89a3158f-4d54-45e6-85a5-90af22b013ca.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0d7ab62-ab92-4a6e-af4c-22b048a740e6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d0d7ab62-ab92-4a6e-af4c-22b048a740e6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4766ac8-111a-4031-b221-c5475f9a81ed.xml" beforeDir="false" />
+    <list default="true" id="64582dc8-5aff-4465-8fad-730b77c9d93f" name="Changes" comment="[add] Signal and ContentSymbol add, Analyser and Botnet add">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/fixtures/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/contentCRUD/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/message.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/104c9ef6-9e4b-46ea-9294-23200c3cb71b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/104c9ef6-9e4b-46ea-9294-23200c3cb71b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0d7ab62-ab92-4a6e-af4c-22b048a740e6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CE307_SE1_C3P0/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CE307_SE1_C3P0/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/initializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/categoryCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/categoryCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/keywordCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/keywordCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/symbolCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/symbolCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/urlCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/urlCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/botnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/botnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/initializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/fixtures/fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/fixtures/fixtures.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_alter_stocksymbol_code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_stocksymbol_unique_code_combination.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_keyword_keywordvalue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0005_alter_keyword_options_alter_keywordvalue_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/categoryCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/categoryCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/keywordCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/keywordCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/signalCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/signalCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/symbolCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/symbolCRUD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/urlCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/urlCRUD.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,26 +56,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/model/contentCRUD" />
       <recent name="$PROJECT_DIR$/app/fixtures" />
       <recent name="$PROJECT_DIR$/Resources" />
       <recent name="$PROJECT_DIR$/app/controller" />
-      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.CE307_SE1_C3P0">
-    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CE307_SE1_C3P0" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,12 +83,56 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/fixtures" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/controller" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/fixtures/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/controller/analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="botnet (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CE307_SE1_C3P0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/final/CE307-SE1-C3PO-main/app/controller" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/final/CE307-SE1-C3PO-main/app/controller/botnet.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="botnet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CE307_SE1_C3P0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/controller" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/controller/botnet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,6 +155,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/fixtures/fixtures.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="messageCRUD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CE307_SE1_C3P0" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/model/contentCRUD" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,8 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.analysis" />
         <item itemvalue="Python.fixtures" />
+        <item itemvalue="Python.messageCRUD" />
+        <item itemvalue="Python.botnet" />
+        <item itemvalue="Python.botnet (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +228,8 @@
       <option name="presentableId" value="Default" />
       <updated>1655980327762</updated>
       <workItem from="1655980335561" duration="24472000" />
-      <workItem from="1656045717109" duration="7845000" />
+      <workItem from="1656045717109" duration="10239000" />
+      <workItem from="1656339209410" duration="12247000" />
     </task>
     <task id="LOCAL-00001" summary="[add] lots of stuff">
       <created>1656004208061</created>
@@ -183,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656004267104</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[add] Signal and ContentSymbol add, Analyser and Botnet add">
+      <created>1656056678153</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656056678154</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,10 +273,16 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="[add] lots of stuff" />
     <MESSAGE value="[add] logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="[add] logs" />
+    <MESSAGE value="[add] Signal and ContentSymbol add, Analyser and Botnet add" />
+    <option name="LAST_COMMIT_MESSAGE" value="[add] Signal and ContentSymbol add, Analyser and Botnet add" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$fixtures.coverage" NAME="fixtures Coverage Results" MODIFIED="1656000525556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/fixtures" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$messageCRUD.coverage" NAME="messageCRUD Coverage Results" MODIFIED="1656348747604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/model/contentCRUD" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$fixtures.coverage" NAME="fixtures Coverage Results" MODIFIED="1656354855848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/fixtures" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$urlCRUD.coverage" NAME="urlCRUD Coverage Results" MODIFIED="1656344856389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/model" />
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1656001181339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/fixtures" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1656356136476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controller" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$botnet__1_.coverage" NAME="botnet (1) Coverage Results" MODIFIED="1656348435386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/final/CE307-SE1-C3PO-main/app/controller" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$botnet.coverage" NAME="botnet Coverage Results" MODIFIED="1656348469467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controller" />
   </component>
 </project>
