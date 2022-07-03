@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64582dc8-5aff-4465-8fad-730b77c9d93f" name="Changes" comment="[add] Signal and ContentSymbol add, Analyser and Botnet add">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controller/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fixtures/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/contentCRUD/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/message.csv" afterDir="false" />
+    <list default="true" id="64582dc8-5aff-4465-8fad-730b77c9d93f" name="Changes" comment="I have no idea let me sleep">
+      <change afterPath="$PROJECT_DIR$/Kamyarhsn.session" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/Kamyarhsn.session" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/migrations/0002_message_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/104c9ef6-9e4b-46ea-9294-23200c3cb71b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/104c9ef6-9e4b-46ea-9294-23200c3cb71b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d0d7ab62-ab92-4a6e-af4c-22b048a740e6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/botnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/botnet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/initializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/fixtures/fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/fixtures/fixtures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/categoryCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/categoryCRUD.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/contentCRUD/messageCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/keywordCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/keywordCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/signalCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/signalCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/symbolCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/symbolCRUD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/urlCRUD.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/urlCRUD.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
@@ -62,7 +51,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Excel (xlsx)&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -211,10 +201,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.botnet" />
         <item itemvalue="Python.analysis" />
         <item itemvalue="Python.fixtures" />
         <item itemvalue="Python.messageCRUD" />
-        <item itemvalue="Python.botnet" />
         <item itemvalue="Python.botnet (1)" />
       </list>
     </recent_temporary>
@@ -229,7 +219,10 @@
       <updated>1655980327762</updated>
       <workItem from="1655980335561" duration="24472000" />
       <workItem from="1656045717109" duration="10239000" />
-      <workItem from="1656339209410" duration="12247000" />
+      <workItem from="1656339209410" duration="13665000" />
+      <workItem from="1656409181518" duration="2709000" />
+      <workItem from="1656412898059" duration="2126000" />
+      <workItem from="1656454077380" duration="66000" />
     </task>
     <task id="LOCAL-00001" summary="[add] lots of stuff">
       <created>1656004208061</created>
@@ -252,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656056678154</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="I have no idea let me sleep">
+      <created>1656356328856</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656356328857</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,15 +274,16 @@
     <MESSAGE value="[add] lots of stuff" />
     <MESSAGE value="[add] logs" />
     <MESSAGE value="[add] Signal and ContentSymbol add, Analyser and Botnet add" />
-    <option name="LAST_COMMIT_MESSAGE" value="[add] Signal and ContentSymbol add, Analyser and Botnet add" />
+    <MESSAGE value="I have no idea let me sleep" />
+    <option name="LAST_COMMIT_MESSAGE" value="I have no idea let me sleep" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$messageCRUD.coverage" NAME="messageCRUD Coverage Results" MODIFIED="1656348747604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/model/contentCRUD" />
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$fixtures.coverage" NAME="fixtures Coverage Results" MODIFIED="1656354855848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/fixtures" />
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$urlCRUD.coverage" NAME="urlCRUD Coverage Results" MODIFIED="1656344856389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/model" />
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1656001181339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/fixtures" />
-    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1656356136476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controller" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1656356296985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controller" />
     <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$botnet__1_.coverage" NAME="botnet (1) Coverage Results" MODIFIED="1656348435386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/final/CE307-SE1-C3PO-main/app/controller" />
-    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$botnet.coverage" NAME="botnet Coverage Results" MODIFIED="1656348469467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controller" />
+    <SUITE FILE_PATH="coverage/CE307_SE1_C3P0$botnet.coverage" NAME="botnet Coverage Results" MODIFIED="1656412247936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controller" />
   </component>
 </project>

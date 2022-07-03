@@ -17,6 +17,7 @@ def create(name,
            text,
            pub_date,
            from_id,
+           views,
            forward_from,
            forward_count,
            edited_date,
@@ -28,7 +29,7 @@ def create(name,
 
     if text is None:
         text = ''
-    message = Message(id=_id, name=name, text=text, pub_date=pub_date, from_id=from_id,
+    message = Message(id=_id, name=name, text=text, pub_date=pub_date, from_id=from_id, views=views,
                       forward_from=forward_from, forward_count=forward_count, edited_date=edited_date,
                       edit_hide=edit_hide, is_reply=is_reply, reply_count=reply_count, reply_to=reply_to,
                       URL=url)

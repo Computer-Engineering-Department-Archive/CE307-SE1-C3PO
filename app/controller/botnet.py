@@ -22,37 +22,42 @@ table = dict.fromkeys(
 
 
 def read_all_messages():
+    global message_count, from_date, to_date
+
     client = connect()
     urls = read_all_urls()
 
+    print(urls, client)
+
     for url in urls:
-        read(client, url, from_date, to_date)
+        read(client, url, message_count, 5)
 
 
-def read(client, chat, count, _from_date, _to_date):
+def read(client, chat, _message_count, _to_date):
     chat = chat[1:]
     channel_entity = client.get_entity(chat)
-
     posts = client(GetHistoryRequest(
         peer=channel_entity,
-        limit=count,
-        offset_date=_from_date,
+        limit=_message_count,
+        offset_date=None,
         offset_id=0,
         max_id=0,
         min_id=0,
         add_offset=0,
         hash=0))
 
+    date_limit = datetime.datetime.now(posts.messages[0].date.tzinfo) - datetime.timedelta(days=_to_date)
     for message in posts.messages:
 
-        if message.date > _to_date:
+        if message.date > date_limit:
             table['name'] = chat
             table['_id'] = message.id
             if message.raw_text is None:
                 continue
-            table['message'] = message.raw_text.replace("\n", " ").replace("(", " ").replace(")", " ")
-            table['pub_date'] = message.date.strftime("%Y/%m/%d,%H:%M:%S")
+            table['message'] = message.raw_text.replace("\n", " ") # .replace("(", " ").replace(")", " ")
+            table['pub_date'] = message.date  # .strftime("%Y/%m/%d,%H:%M:%S")
             table['from_id'] = message.from_id
+            table['views'] = message.views
             if message.fwd_from is not None:
                 table['forward_from'] = message.fwd_from.from_name
             else:
@@ -64,7 +69,7 @@ def read(client, chat, count, _from_date, _to_date):
                 table['forward_count'] = None
 
             if message.edit_date is not None:
-                table['edit_date'] = message.edit_date.strftime("%Y/%m/%d,%H:%M:%S")
+                table['edit_date'] = message.edit_date  # .strftime("%Y/%m/%d,%H:%M:%S")
                 table['edit_hide'] = message.edit_hide
             else:
                 table['edit_date'] = None
@@ -87,6 +92,7 @@ def read(client, chat, count, _from_date, _to_date):
                table['message'],
                table['pub_date'],
                table['from_id'],
+               table['views'],
                table['forward_from'],
                table['forward_count'],
                table['edit_date'],

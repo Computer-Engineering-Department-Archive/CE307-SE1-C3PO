@@ -82,6 +82,7 @@ class Message(Version):
     name = models.CharField('اسم کانال/گروه', max_length=256, null=False)
     text = models.CharField('محتوا متنی', max_length=512, null=False)
     pub_date = models.DateTimeField(null=False)
+    views = models.IntegerField('تعداد بازدید', null=False, default=0)
     from_id = models.IntegerField('فرستنده مستقیم پیام', null=True)
     forward_from = models.IntegerField('فرستنده غیرمستقیم پیام', null=True)
     forward_count = models.IntegerField('تعداد دفعات ارسال غیرمستقیم پیام', null=True)
